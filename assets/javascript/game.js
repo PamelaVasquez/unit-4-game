@@ -13,9 +13,15 @@ var princessLeia = {
             this.hp -= player.counterAttack
         } else if (player.hp <= 0) {
             console.log(`${player.name} is eliminated`);
+            alert(`You have eliminated ${player.name}!`)
+            player.eliminate();
         }
+
         console.log(`${this.name} attack power is ${damage}`);
         console.log(`${player.name} attack power is ${player.counterAttack}`);
+    },
+    eliminate: function () {
+        $("#princessLeia").css("display", "none")
     }
 
 }
@@ -33,10 +39,17 @@ var hanSolo = {
             this.hp -= player.counterAttack
         } else if (player.hp <= 0) {
             console.log(`${player.name} is eliminated`);
-
+            alert(`You have eliminated ${player.name}!`)
+            player.eliminate();
+            round2();
+            return;
         }
         console.log(`${this.name} attack power is ${damage}`);
         console.log(`${player.name} attack power is ${player.counterAttack}`);
+
+    },
+    eliminate: function () {
+        $("#hanSolo").css("display", "none")
     }
 
 }
@@ -53,11 +66,14 @@ var chewy = {
             player.hp -= damage;
             this.hp -= player.counterAttack
         } else if (player.hp <= 0) {
+            alert(`You have eliminated ${player.name}!`)
             console.log(`${player.name} is eliminated`);
-
         }
         console.log(`${this.name} attack power is ${damage}`);
         console.log(`${player.name} attack power is ${player.counterAttack}`);
+    },
+    eliminate: function () {
+        $("#chewy").css("display", "none")
     }
 
 }
@@ -74,12 +90,15 @@ var yoda = {
             player.hp -= damage;
             this.hp -= player.counterAttack
         } else if (player.hp <= 0) {
-
+            alert(`You have eliminated ${player.name}!`)
             console.log(`${player.name} is eliminated`);
 
         }
         console.log(`${this.name} attack power is ${damage}`);
         console.log(`${player.name} attack power is ${player.counterAttack}`);
+    },
+    eliminate: function () {
+        $("#yoda").css("display", "none")
     }
 
 }
@@ -90,13 +109,24 @@ function increment() {
     return n;
 }
 
-function playGame() {
-    hanSolo.attack(yoda)
-    increment()
+function round1() {
+    hanSolo.attack(yoda);
+    increment();
+}
+
+function round2() {
+    hanSolo.attack(chewy);
+    increment();
 }
 
 $("#attacks").click(function () {
-    playGame();
+    if (yoda.hp != 0) {
+        round1();
+    } else if {
+        round2();
+    } else {
+        return;
+    }
 });
 
 // Assign stats to characters - Health Points, Attack Power, Counter Attack Power
