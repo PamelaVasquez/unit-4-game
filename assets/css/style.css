@@ -1,7 +1,21 @@
-#yoda {
-    display: inline;
+.col-2 {
+    border: 2px solid black;
 }
 
-body {
-    background-color: firebrick;
+.row {
+    padding: 0 5px;
+}
+
+#gameTitle {
+    text-align: right;
+}
+
+#characters,
+#enemiesToAttack {
+    margin-left: 0px;
+    ]
+}
+
+p {
+    text-align: center;
 }

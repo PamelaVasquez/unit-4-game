@@ -5,26 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Star Wars RPG Game</title>
-    <link rel="stylesheet" href="assets/css/reset.css" class="ref" />
+    <!-- <link rel="stylesheet" href="assets/css/reset.css" class="ref" /> -->
     <link rel="stylesheet" href="assets/css/style.css" class="ref" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js
     "></script>
   </head>
   <body>
-    <div id="princessLeia">
-      <h1>Princess Leia</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" id="gameTitle">
+          <h1>StarWars RPG!</h1>
+        </div>
+      </div>
+      <div class="row" id="characters">
+        <div class="col-2" id="princessLeia">
+          <div class="row"><p>Princess Leia</p></div>
+          <img
+            src="assets/images/princess_leia.png"
+            alt="Princess Leia"
+            width="100%;"
+          />
+          <div class="row" id="princessLeiaHP"></div>
+        </div>
+        <div class="col-2" id="hanSolo">
+          <div class="row player-name"><p>Han Solo</p></div>
+          <img src="assets/images/han_solo.png" alt="Han Solo" width="100%;" />
+          <div class="row" id="hanSoloHP"></div>
+        </div>
+        <div class="col-2" id="chewy">
+          <div class="row player-name"><p>Chewy</p></div>
+          <img src="assets/images/chewy.png" alt="Chewy" width="100%;" />
+          <div class="row" id="chewyHP"></div>
+        </div>
+        <div class="col-2" id="yoda">
+          <div class="row player-name"><p>Yoda</p></div>
+          <img src="assets/images/yoda.png" alt="Yoda" width="100%;" />
+          <div class="row" id="yodaHP"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12" id="selectedCharacter">
+          <h1>Your Character</h1>
+          <div class="col-2" id="princessLeia"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h1>Enemies Avaliable To Attack</h1>
+          <div class="row" id="enemiesToAttack">
+            <div class="col-2" id="princessLeia">
+              <div class="row player-name"><p>Princess Leia</p></div>
+              <div class="row">player image</div>
+              <div class="row">HealthPoints</div>
+            </div>
+            <div class="col-2" id="princessLeia">
+              <div class="row player-name"><p>Princess Leia</p></div>
+              <div class="row">player image</div>
+              <div class="row">HealthPoints</div>
+            </div>
+            <div class="col-2" id="princessLeia">
+              <div class="row player-name"><p>Princess Leia</p></div>
+              <div class="row">player image</div>
+              <div class="row">HealthPoints</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12" id="fightSection">
+          <h1>Fight Section</h1>
+          <div class="col-2" id="princessLeia">
+            <div class="row player-name"><p>Princess Leia</p></div>
+            <div class="row">player image</div>
+            <div class="row" id="selectedPlayerHp">HealthPoints</div>
+          </div>
+        </div>
+      </div>
+      <button id="attack">Attack</button>
+      <div class="row">
+        <div class="col-12" id="fightSection">
+          <h1>Defender</h1>
+          <div class="col-2" id="princessLeia">
+            <div class="row player-name"><p>Princess Leia</p></div>
+            <div class="row">player image</div>
+            <div class="row" id="defenderHp">HealthPoints</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p id="selectedPlayerDamage"></p>
+          <p id="enemiesDamage"></p>
+        </div>
+      </div>
     </div>
-
-    <h1>Han Solo</h1>
-    <div id="chewy">
-      <h1>Chewy</h1>
-    </div>
-    <h3 id="health-points"></h3>
-    <button id="attack">attack</button>
-    <div id="yoda">
-      <h1>Yoda</h1>
-    </div>
-    <h3 id="health-points"></h3>
     <script src="assets/javascript/game.js"></script>
   </body>
 </html>

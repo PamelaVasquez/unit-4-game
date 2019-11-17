@@ -149,7 +149,6 @@ function playGame3() {
     increment();
 }
 
-
 $("#attack").click(function () {
     switch (yoda.hp > 0) {
         case (chewy.hp <= 0):
@@ -178,14 +177,11 @@ $("#attack").click(function () {
 
 });
 
-// Assign stats to characters - Health Points, Attack Power, Counter Attack Power
-// Function that will increase selected player attack by its base Attack Power
-// attack: function (player, attackPower) {
-// var move = this.attackPower;
-// console.log(`${this.name} attack power is ${move.name}`)
-// });
-// Push Attack Power everytime in increases to selected players attack power
-// Opponent power remains the same
-// Eliminate opponent once Health Power is at 0
-// Continue game after defeating opponent
-// Stop game if player health points reaches 0
+$('#princessLeiaHP').append(`${princessLeia.hp}`)
+$('#hanSoloHP').append(`${hanSolo.hp}`)
+$('#chewyHP').append(`${chewy.hp}`)
+$('#yodaHP').append(`${yoda.hp}`)
+
+$('#princessLeia').click(function () {
+    $('#princessLeia').appendTo('#selectedCharacter')
+});
