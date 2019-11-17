@@ -98,7 +98,6 @@ var yoda = {
             player.eliminate();
         }
         if (this.hp <= 0) {
-            console.log(`${this.name} is eliminated`)
             alert('You Lost!')
             $('#attack').prop('disabled', true);
         }
@@ -198,16 +197,16 @@ function yodaVSsolo() {
 }
 
 function yodaVSchewy() {
-    if (chew.hp > 0) {
+    if (chewy.hp > 0) {
         yoda.attack(chewy);
         increment();
     }
 }
 
-$('.princessLeiaHP').prepend(`<p>${princessLeia.hp}</p>`).addClass('hp')
-$('.hanSoloHP').append(`<p>${hanSolo.hp}</p>`).addClass('hp')
-$('.chewyHP').append(`<p>${chewy.hp}</p>`).addClass('hp')
-$('.yodaHP').append(`<p>${yoda.hp}</p>`).addClass('hp')
+$('.princessLeiaHP').append(`<p>Health Points: ${princessLeia.hp}</p>`).addClass('hp')
+$('.hanSoloHP').append(`<p>Health Points: ${hanSolo.hp}</p>`).addClass('hp')
+$('.chewyHP').append(`<p>Health Points: ${chewy.hp}</p>`).addClass('hp')
+$('.yodaHP').append(`<p>Health Points: ${yoda.hp}</p>`).addClass('hp')
 
 
 
@@ -222,16 +221,16 @@ $('#princessLeia').one("click", function () {
         $('#hanSolo-Leia-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             leiaVSsolo();
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
         });
     });
     $('#chewy-Leia-enemies').one("click", function () {
         $('#chewy-Leia-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             leiaVSchewy();
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
-            $('.chewyHP').text(`${chewy.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
         });
 
     });
@@ -239,8 +238,8 @@ $('#princessLeia').one("click", function () {
         $('#yoda-Leia-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             leiaVSyoda();
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
-            $('.yodaHP').text(`${yoda.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
         });
     });
 });
@@ -258,24 +257,24 @@ $('#hanSolo').one("click", function () {
         $('#princessLeia-solo-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             soloVSleia();
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
         });
     });
     $('#yoda-solo-enemies').one("click", function () {
         $('#yoda-solo-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             soloVSyoda();
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
-            $('.yodaHP').text(`${yoda.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
         });
     });
     $('#chewy-solo-enemies').one("click", function () {
         $('#chewy-solo-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             soloVSchewy();
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
-            $('.chewyHP').text(`${chewy.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
         });
     });
 });
@@ -292,24 +291,24 @@ $('#chewy').one("click", function () {
         $('#princessLeia-chewy-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             chewyVSleia();
-            $('.chewyHP').text(`${chewy.hp}`)
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
         });
     });
     $('#yoda-chewy-enemies').one("click", function () {
         $('#yoda-chewy-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             chewyVSyoda();
-            $('.chewyHP').text(`${chewy.hp}`)
-            $('.yodaHP').text(`${yoda.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
         });
     });
     $('#hanSolo-chewy-enemies').one("click", function () {
         $('#hanSolo-chewy-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             chewyVSsolo();
-            $('.chewyHP').text(`${chewy.hp}`)
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
         });
     });
 });
@@ -326,24 +325,24 @@ $('#yoda').one("click", function () {
         $('#princessLeia-yoda-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             yodaVSleia();
-            $('.yodaHP').text(`${yoda.hp}`)
-            $('.princessLeiaHP').text(`${princessLeia.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
+            $('.princessLeiaHP').text(`Health Points: ${princessLeia.hp}`)
         });
     });
     $('#chewy-yoda-enemies').one("click", function () {
         $('#chewy-yoda-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             yodaVSchewy();
-            $('.yodaHP').text(`${yoda.hp}`)
-            $('.chewyHP').text(`${chewy.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
+            $('.chewyHP').text(`Health Points: ${chewy.hp}`)
         });
     });
     $('#hanSolo-yoda-enemies').one("click", function () {
         $('#hanSolo-yoda-enemies').appendTo('#oppnent').addClass('defender');
         $("#attack").click(function () {
             yodaVSsolo();
-            $('.yodaHP').text(`${yoda.hp}`)
-            $('.hanSoloHP').text(`${hanSolo.hp}`)
+            $('.yodaHP').text(`Health Points: ${yoda.hp}`)
+            $('.hanSoloHP').text(`Health Points: ${hanSolo.hp}`)
         });
     });
 });
