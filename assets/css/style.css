@@ -10,11 +10,13 @@ body {
 .hp>p {
     font-family: roboto mono;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .player-name {
     font-family: roboto mono;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .hp {
@@ -32,13 +34,12 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 75%;
 }
 
 .col-2 {
     border: 2px solid black;
     margin: 3px;
-    /* padding-bottom: 20px; */
 }
 
 .row {

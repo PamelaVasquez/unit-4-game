@@ -11,18 +11,14 @@ var princessLeia = {
             this.hp -= player.counterAttack;
         }
         if (player.hp <= 0) {
-            console.log(`${player.name} is eliminated`);
             player.eliminate();
         }
         if (this.hp <= 0) {
-            console.log(`${this.name} is eliminated`)
             alert('You Lost!')
             $('#attack').prop('disabled', true);
         }
         $('#selectedPlayerDamage').text(`${this.name} attack power is ${damage}`);
         $('#enemiesDamage').text(`${player.name} attack power is ${player.counterAttack}`);
-        console.log(player.hp);
-        console.log(this.hp);
 
     },
     eliminate: function () {
@@ -43,18 +39,14 @@ var hanSolo = {
             this.hp -= player.counterAttack
         }
         if (player.hp <= 0) {
-            console.log(`${player.name} is eliminated`);
             player.eliminate();
         }
         if (this.hp <= 0) {
-            console.log(`${this.name} is eliminated`)
             alert('You Lost!')
             $('#attack').prop('disabled', true);
         }
         $('#selectedPlayerDamage').text(`${this.name} attack power is ${damage}`);
         $('#enemiesDamage').text(`${player.name} attack power is ${player.counterAttack}`);
-        console.log(player.hp);
-        console.log(this.hp);
 
     },
     eliminate: function () {
@@ -75,18 +67,14 @@ var chewy = {
             this.hp -= player.counterAttack
         }
         if (player.hp <= 0) {
-            console.log(`${player.name} is eliminated`);
             player.eliminate();
         }
         if (this.hp <= 0) {
-            console.log(`${this.name} is eliminated`)
             alert('You Lost!')
             $('#attack').prop('disabled', true);
         }
         $('#selectedPlayerDamage').text(`${this.name} attack power is ${damage}`);
         $('#enemiesDamage').text(`${player.name} attack power is ${player.counterAttack}`);
-        console.log(player.hp);
-        console.log(this.hp);
 
     },
     eliminate: function () {
@@ -107,7 +95,6 @@ var yoda = {
             this.hp -= player.counterAttack
         }
         if (player.hp <= 0) {
-            console.log(`${player.name} is eliminated`);
             player.eliminate();
         }
         if (this.hp <= 0) {
@@ -117,8 +104,6 @@ var yoda = {
         }
         $('#selectedPlayerDamage').text(`${this.name} attack power is ${damage}`);
         $('#enemiesDamage').text(`${player.name} attack power is ${player.counterAttack}`);
-        console.log(player.hp);
-        console.log(this.hp);
 
     },
     eliminate: function () {
