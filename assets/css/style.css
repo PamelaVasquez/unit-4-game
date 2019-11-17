@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body {
+    background-image: url(../images/starwarsbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hp>p {
+    font-family: roboto mono;
+    text-align: center;
+}
+
+.player-name {
+    font-family: roboto mono;
+    text-align: center;
+}
+
+.hp {
+    font-family: roboto mono;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px #333;
+    font-family: roboto mono;
+}
+
+.responsive {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
 .col-2 {
     border: 2px solid black;
+    margin: 3px;
+    /* padding-bottom: 20px; */
 }
 
 .row {
@@ -10,12 +49,67 @@
     text-align: right;
 }
 
-#characters,
-#enemiesToAttack {
+#characters {
     margin-left: 0px;
-    ]
 }
 
-p {
+#enemiesToAttack {
+    margin-left: 0px;
+    background-color: firebrick;
+}
+
+#Leia-enemiesToAttack,
+#solo-enemiesToAttack,
+#chewy-enemiesToAttack,
+#yoda-enemiesToAttack {
+    display: none;
+    margin: -3px
+}
+
+.selectedCharacter {
+    border: 2px solid green;
+}
+
+.enemies {
+    background-color: firebrick;
+    margin: 3px;
+    color: white;
     text-align: center;
+}
+
+#princessLeia,
+#hanSolo,
+#chewy,
+#yoda {
+    background-color: white;
+}
+
+#selectedPlayerDamage,
+#enemiesDamage {
+    color: white;
+    text-align: center;
+    background-color: #333333;
+}
+
+#winlosemsg {
+    color: white;
+    text-align: center;
+    background-color: blue;
+}
+
+#attack {
+    background-color: greenyellow;
+    padding: 10px;
+    margin-left: 10px;
+    font-family: roboto mono;
+    font-size: 20px;
+    border-radius: 15%;
+    border: none;
+}
+
+#attack:hover {
+    background-color: black;
+    color: cornsilk;
+    border: none;
+
 }
